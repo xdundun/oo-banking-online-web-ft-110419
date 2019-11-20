@@ -22,6 +22,7 @@ class Transfer
       self.sender.balance -= self.amount
       self.receiver.deposit(self.amount)
       self.status = "complete"
+    else
 
   #   if @sender.valid?
   #     @status = "rejected"
