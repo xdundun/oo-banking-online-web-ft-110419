@@ -21,13 +21,12 @@ class Transfer
     if @sender.valid?
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
-    end
    elsif @receiver.valid? && @status == "pending"
       @sender.balance -= @amount
       puts @sender.display_balance
       @receiver.deposit(@amount)
       puts @receiver.display_balance
       @status = "complete"
-   #end
+   end
   end
 end #end of class
