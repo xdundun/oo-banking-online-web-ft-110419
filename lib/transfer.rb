@@ -27,7 +27,6 @@ class Transfer
       self.receiver.balance += self.amount
     #  self.receiver.deposit(self.amount)
       self.status = "complete"
-    els
 
     end
 
