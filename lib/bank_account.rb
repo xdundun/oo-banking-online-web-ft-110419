@@ -9,6 +9,7 @@ class BankAccount
   end
 
   def deposit(cash)
+    @balace += cash
   end
 
 end
