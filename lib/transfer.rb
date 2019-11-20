@@ -14,7 +14,6 @@ class Transfer
 
   def execute_transaction
     if self.status != "complete" && self.valid?
-      #needs to check if transaction happened once already (stat = complete)
         self.sender.balance -= self.amount
         self.receiver.balance += self.amount
         self.status = "complete"
