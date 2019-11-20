@@ -23,6 +23,7 @@ class Transfer
       self.receiver.deposit(self.amount)
       self.status = "complete"
     else
+      self.status = "rejected"
 
   #   if @sender.valid?
   #     @status = "rejected"
