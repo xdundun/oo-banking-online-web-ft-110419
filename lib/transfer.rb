@@ -27,6 +27,6 @@ class Transfer
       puts @sender.display_balance
       @receiver.deposit(@amount)
       @status = "complete"
-   end
+   #end
   end
 end #end of class
