@@ -8,4 +8,4 @@ class Transfer
     @amount = amount
 
   end
-end
+end #end of class
