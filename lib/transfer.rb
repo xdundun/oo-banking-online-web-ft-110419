@@ -22,10 +22,8 @@ class Transfer
       @sender.balance -= amount
       @receiver.balance += amount
       @status = "complete"
-    end
-  elsif @sender.status == "closed"
-
-    return "Transaction rejected. Please check your account balance."
-
+    elsif @sender.status == "closed"
+     "Transaction rejected. Please check your account balance."
+   end
   end
 end #end of class
