@@ -13,7 +13,6 @@ class Transfer
   end
 
   def execute_transaction
-
     if self.status != "complete" && self.valid?
       #needs to check if transaction happened once already (stat = complete)
         self.sender.balance -= self.amount
@@ -23,28 +22,5 @@ class Transfer
         self.status = "rejected"
         return "Transaction rejected. Please check your account balance."
       end
-
-    # if !@sender.valid?
-    #   self.status = "rejected"
-    #   return "Transaction rejected. Please check your account balance."
-    #
-    # elsif self.status != "rejected" || self.status != "complete" && self.valid?
-    #   self.sender.balance -= self.amount
-    #   self.receiver.balance += self.amount
-    # #  self.receiver.deposit(self.amount)
-    #   self.status = "complete"
-    #
-    # end
-
-  #   if @sender.valid?
-  #     @status = "rejected"
-  #     return "Transaction rejected. Please check your account balance."
-  #  elsif @receiver.valid? && @status == "pending"
-  #   #  @sender.deposit( - @amount)
-  #   #  puts @sender.display_balance
-  #     @receiver.deposit(@amount)
-  #     puts @receiver.display_balance
-  #     @status = "complete"
-  #  end
   end
 end #end of class
